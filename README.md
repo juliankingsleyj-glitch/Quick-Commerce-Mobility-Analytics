@@ -1,19 +1,19 @@
-Mobility & Quick-Commerce Operational Analytics: Ola & Blinkit
+# Mobility & Quick-Commerce Operational Analytics: Ola & Blinkit
 
-Summary
+# Summary
 This project features a dual-pronged operational analysis of two fast-paced tech sectors: Ride-hailing (Ola) and Hyper-local Quick Commerce (Blinkit). Utilizing SQL for mobility dispatch data and Python (Pandas) for FMCG retail data, the analysis identifies severe operational inefficiencies, isolates supply-side drop-offs (driver cancellations), and formulates hyper-local inventory distribution strategies.
 
-Business Problem
+# Business Problem
 Hyper-local businesses operate on razor-thin margins and rely heavily on supply-side reliability and optimized physical inventory.
 Mobility (Ola): High driver cancellation rates and dispatch delays lead to customer churn and lost Gross Merchandise Value (GMV).
 Quick-Commerce (Blinkit): Generic inventory stocking across different city tiers leads to dead stock in some areas and stockouts in others, severely reducing revenue yield per square foot.
 
-Technical Stack
+# Technical Stack
 Database Querying (Mobility): SQL (PostgreSQL, Aggregations, Filtering)
 Data Manipulation (Quick-Commerce): Python 3, Pandas, NumPy
 Data Visualization: Matplotlib, Seaborn
 
-Part 1: Mobility Fleet Optimization (SQL - Ola)
+# Part 1: Mobility Fleet Optimization (SQL - Ola)
 To optimize fleet dispatch logic, we need to understand why and where rides are failing. I engineered SQL queries to track driver defection rates and isolate high-value customers for loyalty retention.
 1. Isolating Supply-Side Drop-offs (Driver Cancellations)
 Understanding why drivers cancel is critical for adjusting algorithmic incentive structures.
@@ -44,7 +44,7 @@ ORDER BY total_successful_rides DESC
 LIMIT 5;
 
 
-Part 2: Quick-Commerce Inventory Velocity (Python - Blinkit)
+# Part 2: Quick-Commerce Inventory Velocity (Python - Blinkit)
 For the Blinkit dataset, I used Python's Pandas library to move beyond basic sales totals and calculate hyper-local demand velocity.
 
 1. Analyzing Tier-Specific Demand
@@ -82,7 +82,7 @@ plt.ylabel('Item Category')
 plt.show()
 
 
-Strategic Recommendations
+# Strategic Recommendations
 
 Dynamic Driver Incentives (Ola): SQL analysis reveals a high frequency of driver cancellations due to "personal/car issues." Recommend implementing a dynamic micro-bonus for drivers who accept and complete rides in high-cancellation zones to stabilize supply.
 Tier 3 Shelf-Space Optimization (Blinkit): Python aggregations show Tier 3 cities process immense volume. Recommend prioritizing shelf space for high-velocity items like "Snack Foods" and "Fruits and Vegetables" over low-performing "Breakfast" items to maximize yield per square foot.
